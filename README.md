@@ -1,1 +1,39 @@
-# conversion
+# Simple Conversion App Project
+
+The users are science teachers who are comfortable using the command line as they are using a browser.
+In their “Unit Conversion” science unit, they want to assign students unit-conversion problems on paper worksheets.
+After students turn in their completed worksheets, the teachers want to be able to enter the questions and student responses into a computer to be graded.
+
+# Features
+
+1. Conversion for temperature units
+2. Conversion for volume units
+
+# Technologies Used
+
+1. React JavaScript library
+2. Bootstrap
+
+## Cloning and Running the Application in local
+
+Clone the project into local
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
