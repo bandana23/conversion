@@ -4,6 +4,16 @@ The users are science teachers who are comfortable using the command line as the
 In their “Unit Conversion” science unit, they want to assign students unit-conversion problems on paper worksheets.
 After students turn in their completed worksheets, the teachers want to be able to enter the questions and student responses into a computer to be graded.
 
+I use number fields to enter data and no string is allowed since conversion unit will be a number always.
+
+Created different componenets for form ,input and select fields.
+
+In conversion.js, conversion input unit to target unit logic available.
+
+For unit testing App.test.js renders UI part testing.
+For unit testing conversion.test.js renders testing for convesrion logic for input unit to target unit.
+Added all the scenario explained in Flexion Code challange Document.
+
 # Features
 
 1. Conversion for temperature units
