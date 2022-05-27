@@ -5,15 +5,16 @@ const volumes = [
   "cubic-inches",
   "cubic-feet",
   "gallons",
+  "cups",
 ];
 
 /**
- * 
+ *
  * @param {*} inputValueString - input value string
- * @param {*} inputUnit 
- * @param {*} targetUnit 
- * @param {*} studentResponseString 
- * @returns success if value is valid
+ * @param {*} inputUnit
+ * @param {*} targetUnit
+ * @param {*} studentResponseString
+ * @returns correct if value is valid
  */
 export const unitConversionTest = (
   inputValueString,
@@ -21,43 +22,33 @@ export const unitConversionTest = (
   targetUnit,
   studentResponseString
 ) => {
-  console.log(inputValueString)
-  console.log(studentResponseString)
   let inputValue = Number(inputValueString);
-  console.log(inputValue);
-  console.log(inputValueString)
-  console.log(studentResponseString)
+
   let studentResponse = Number(studentResponseString);
 
   //check inputValueString and studentResponseString is empty or not
-  if(String(inputValueString).length && String(studentResponseString).length){
+  if (String(inputValueString).length && String(studentResponseString).length) {
+    if (temps.includes(inputUnit) && temps.includes(targetUnit)) {
+      let kelvinTemp = tempToKelvin(inputValue, inputUnit);
+      let correctAnswer = kelvinToTarget(kelvinTemp, targetUnit);
 
-  if (isNaN(inputValue)) {
-    console.log("invalid blcok");
-    return "Invalid input";
+      return studentResponse.toFixed(1) === correctAnswer.toFixed(1)
+        ? "Correct"
+        : "Incorrect";
+    } else if (volumes.includes(inputUnit) && volumes.includes(targetUnit)) {
+      let literVolume = volumeToLiters(inputValue, inputUnit);
+      let correctAnswer = litersToTarget(literVolume, targetUnit);
+
+      return studentResponse.toFixed(1) === correctAnswer.toFixed(1)
+        ? "Correct"
+        : "Incorrect";
+    } else {
+      return "Invalid";
+    }
   }
-
-  if (isNaN(studentResponse)) {
-    console.log("incorect log");
-    return "Incorrect response";
-  }
-
-  if (temps.includes(inputUnit) && temps.includes(targetUnit)) {
-    let kelvinTemp = tempToKelvin(inputValue, inputUnit);
-    let correctAnswer = kelvinToTarget(kelvinTemp, targetUnit);
-
-    return studentResponse === correctAnswer ? "Success" : "Incorrect";
-  } else if (volumes.includes(inputUnit) && volumes.includes(targetUnit)) {
-    let literVolume = volumeToLiters(inputValue, inputUnit);
-    let correctAnswer = litersToTarget(literVolume, targetUnit);
-
-    return studentResponse === correctAnswer ? "Success" : "Incorrect";
-  } else {
-    return "Invalid";
-  }
-}
 };
 
+//convert each temp to kelvin in this function
 const tempToKelvin = (originalTemp, originalUnit) => {
   switch (originalUnit) {
     case "kelvin":
@@ -70,7 +61,7 @@ const tempToKelvin = (originalTemp, originalUnit) => {
       return originalTemp / 1.8;
   }
 };
-
+//convert kelvinTemp to target Unit
 const kelvinToTarget = (kelvinTemp, targetUnit) => {
   switch (targetUnit) {
     case "kelvin":
@@ -84,6 +75,7 @@ const kelvinToTarget = (kelvinTemp, targetUnit) => {
   }
 };
 
+//convert each volume to litres and return response
 const volumeToLiters = (originalVol, originalUnit) => {
   switch (originalUnit) {
     case "liters":
@@ -101,6 +93,7 @@ const volumeToLiters = (originalVol, originalUnit) => {
   }
 };
 
+//convert Litres to target unit and return response
 const litersToTarget = (litersVolume, targetUnit) => {
   switch (targetUnit) {
     case "liters":

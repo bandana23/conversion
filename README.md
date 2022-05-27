@@ -37,3 +37,11 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+Tips to enhance the application Quality
+
+1.can implement this application with container like docker
+2.can be a different folder for test
+3.can implement different other test case for integration and component testing
+4.can design properly frontend with bootstrap css
+5.can add tooltip for user so that user can understand in the number field texts are not allowed.

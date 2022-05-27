@@ -1,13 +1,7 @@
 import React from "react";
 
-const ConversionInput = ({value , onChange}) => {
+const ConversionInput = ({ value, onChange }) => {
+  return <input type="number" value={value} onChange={onChange} />;
+};
 
-    return (
-        <input type='number'
-                value={value}
-                onChange={onChange}
-            />
-    )
-}
-
-export default ConversionInput
+export default ConversionInput;
