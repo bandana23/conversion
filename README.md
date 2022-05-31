@@ -60,5 +60,5 @@ How to clone this Project
 
 1. git clone "https://github.com/bandana23/conversion.git"
 2. Once Download complete and Go to the conversion folder and type npm install
-3. once everything installed then type npm start
+3. Once everything installed then type npm start
 4. To run test npm run test and press "a" to run all tests from Watch Usage.
