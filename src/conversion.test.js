@@ -4,6 +4,13 @@ import { unitConversionTest } from "./conversion";
 
 import App from "./App";
 
+/**
+ *
+ * @param {*} inputValueString
+ * @param {*} inputUnit
+ * @param {*} targetUnit
+ * @param {*} studentResponseString
+ */
 describe("App", () => {
   it("renders App component", () => {
     render(<App />);
