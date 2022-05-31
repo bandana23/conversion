@@ -55,3 +55,10 @@ Tips to enhance the application Quality
 3.can implement different other test case for integration and component testing
 4.can design properly frontend with bootstrap css
 5.can add tooltip for user so that user can understand in the number field texts are not allowed.
+
+How to clone this Project
+
+1. git clone "https://github.com/bandana23/conversion.git"
+2. Once Download complete and Go to the conversion folder and type npm install
+3. once everything installed then type npm start
+4. To run test npm run test and press "a" to run all tests from Watch Usage.
